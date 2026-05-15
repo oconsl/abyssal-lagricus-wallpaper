@@ -1,0 +1,357 @@
+{
+  "file": "index.html",
+  "general": {
+    "properties": {
+      "schemecolor": {
+        "order": 0,
+        "text": "ui_browse_properties_scheme_color",
+        "type": "color",
+        "value": "0.31 0.58 1"
+      },
+
+      "header_clock": {
+        "order": 10,
+        "text": "— CLOCK —",
+        "type": "text",
+        "value": ""
+      },
+      "show_clock": {
+        "order": 11,
+        "text": "Show Clock",
+        "type": "bool",
+        "value": true
+      },
+      "clock_hour12": {
+        "order": 12,
+        "text": "12-Hour Format",
+        "type": "bool",
+        "value": false,
+        "condition": "show_clock.value"
+      },
+      "clock_color": {
+        "order": 13,
+        "text": "Clock Color",
+        "type": "color",
+        "value": "0.78 0.88 1",
+        "condition": "show_clock.value"
+      },
+      "clock_glow_intensity": {
+        "order": 14,
+        "text": "Clock Glow Intensity",
+        "type": "slider",
+        "value": 60,
+        "min": 0,
+        "max": 100,
+        "condition": "show_clock.value"
+      },
+      "date_color": {
+        "order": 15,
+        "text": "Date Color",
+        "type": "color",
+        "value": "0.55 0.73 1",
+        "condition": "show_clock.value"
+      },
+      "clock_pos_x": {
+        "order": 16,
+        "text": "Clock Position X",
+        "type": "slider",
+        "value": 12,
+        "min": 0,
+        "max": 50,
+        "condition": "show_clock.value"
+      },
+      "clock_pos_y": {
+        "order": 17,
+        "text": "Clock Position Y",
+        "type": "slider",
+        "value": 10,
+        "min": 0,
+        "max": 50,
+        "condition": "show_clock.value"
+      },
+      "clock_size": {
+        "order": 18,
+        "text": "Clock Size",
+        "type": "slider",
+        "value": 85,
+        "min": 20,
+        "max": 200
+      },
+      "show_accent_line": {
+        "order": 19,
+        "text": "Show Accent Line",
+        "type": "bool",
+        "value": true,
+        "condition": "show_clock.value"
+      },
+
+      "header_lightning": {
+        "order": 30,
+        "text": "— LIGHTNING —",
+        "type": "text",
+        "value": ""
+      },
+      "lightning_enabled": {
+        "order": 31,
+        "text": "Enable Lightning",
+        "type": "bool",
+        "value": true
+      },
+      "lightning_brightness": {
+        "order": 32,
+        "text": "Lightning Brightness",
+        "type": "slider",
+        "value": 62,
+        "min": 0,
+        "max": 100,
+        "condition": "lightning_enabled.value"
+      },
+      "lightning_color": {
+        "order": 33,
+        "text": "Lightning Core Color",
+        "type": "color",
+        "value": "0.82 0.91 1",
+        "condition": "lightning_enabled.value"
+      },
+      "lightning_glow_color": {
+        "order": 34,
+        "text": "Lightning Glow Color",
+        "type": "color",
+        "value": "0.30 0.65 1",
+        "condition": "lightning_enabled.value"
+      },
+      "spawn_min": {
+        "order": 35,
+        "text": "Spawn Interval Min (ms)",
+        "type": "slider",
+        "value": 600,
+        "min": 50,
+        "max": 5000,
+        "condition": "lightning_enabled.value"
+      },
+      "spawn_max": {
+        "order": 36,
+        "text": "Spawn Interval Max (ms)",
+        "type": "slider",
+        "value": 1800,
+        "min": 100,
+        "max": 10000,
+        "condition": "lightning_enabled.value"
+      },
+      "bolt_life_min": {
+        "order": 37,
+        "text": "Bolt Duration Min (ms)",
+        "type": "slider",
+        "value": 180,
+        "min": 50,
+        "max": 2000,
+        "condition": "lightning_enabled.value"
+      },
+      "bolt_life_max": {
+        "order": 38,
+        "text": "Bolt Duration Max (ms)",
+        "type": "slider",
+        "value": 480,
+        "min": 100,
+        "max": 3000,
+        "condition": "lightning_enabled.value"
+      },
+      "bolt_jaggedness": {
+        "order": 39,
+        "text": "Bolt Jaggedness",
+        "type": "slider",
+        "value": 50,
+        "min": 10,
+        "max": 100,
+        "condition": "lightning_enabled.value"
+      },
+      "branch_enabled": {
+        "order": 40,
+        "text": "Enable Branches",
+        "type": "bool",
+        "value": true,
+        "condition": "lightning_enabled.value"
+      },
+      "crawl_enabled": {
+        "order": 41,
+        "text": "Enable Energy Crawl",
+        "type": "bool",
+        "value": true,
+        "condition": "lightning_enabled.value"
+      },
+      "flash_enabled": {
+        "order": 42,
+        "text": "Enable Flash Bursts",
+        "type": "bool",
+        "value": true,
+        "condition": "lightning_enabled.value"
+      },
+      "flash_brightness": {
+        "order": 43,
+        "text": "Flash Brightness",
+        "type": "slider",
+        "value": 35,
+        "min": 0,
+        "max": 100,
+        "condition": "lightning_enabled.value && flash_enabled.value"
+      },
+      "burst_chance": {
+        "order": 44,
+        "text": "Multi-Bolt Burst Chance (%)",
+        "type": "slider",
+        "value": 15,
+        "min": 0,
+        "max": 100,
+        "condition": "lightning_enabled.value"
+      },
+
+      "header_shake": {
+        "order": 50,
+        "text": "— SCREEN SHAKE —",
+        "type": "text",
+        "value": ""
+      },
+      "shake_enabled": {
+        "order": 51,
+        "text": "Enable Screen Shake",
+        "type": "bool",
+        "value": true
+      },
+      "shake_intensity": {
+        "order": 52,
+        "text": "Shake Intensity",
+        "type": "slider",
+        "value": 50,
+        "min": 0,
+        "max": 100,
+        "condition": "shake_enabled.value"
+      },
+      "shake_interval_min": {
+        "order": 53,
+        "text": "Shake Interval Min (s)",
+        "type": "slider",
+        "value": 4,
+        "min": 1,
+        "max": 30,
+        "condition": "shake_enabled.value"
+      },
+      "shake_interval_max": {
+        "order": 54,
+        "text": "Shake Interval Max (s)",
+        "type": "slider",
+        "value": 12,
+        "min": 2,
+        "max": 60,
+        "condition": "shake_enabled.value"
+      },
+
+      "header_particles": {
+        "order": 60,
+        "text": "— PARTICLES & BUBBLES —",
+        "type": "text",
+        "value": ""
+      },
+      "particle_count": {
+        "order": 61,
+        "text": "Particle Count",
+        "type": "slider",
+        "value": 90,
+        "min": 0,
+        "max": 300
+      },
+      "bubble_count": {
+        "order": 62,
+        "text": "Bubble Count",
+        "type": "slider",
+        "value": 28,
+        "min": 0,
+        "max": 100
+      },
+
+      "header_effects": {
+        "order": 70,
+        "text": "— EFFECTS —",
+        "type": "text",
+        "value": ""
+      },
+      "ripple_enabled": {
+        "order": 71,
+        "text": "Enable Water Ripple",
+        "type": "bool",
+        "value": true
+      },
+      "ripple_opacity": {
+        "order": 72,
+        "text": "Ripple Intensity",
+        "type": "slider",
+        "value": 13,
+        "min": 0,
+        "max": 50,
+        "condition": "ripple_enabled.value"
+      },
+      "ripple_speed": {
+        "order": 73,
+        "text": "Ripple Speed",
+        "type": "slider",
+        "value": 50,
+        "min": 10,
+        "max": 200,
+        "condition": "ripple_enabled.value"
+      },
+      "grain_enabled": {
+        "order": 74,
+        "text": "Enable Film Grain",
+        "type": "bool",
+        "value": true
+      },
+      "grain_opacity": {
+        "order": 75,
+        "text": "Grain Intensity",
+        "type": "slider",
+        "value": 7,
+        "min": 0,
+        "max": 30,
+        "condition": "grain_enabled.value"
+      },
+      "vignette_enabled": {
+        "order": 76,
+        "text": "Enable Vignette",
+        "type": "bool",
+        "value": true
+      },
+      "vignette_intensity": {
+        "order": 77,
+        "text": "Vignette Intensity",
+        "type": "slider",
+        "value": 78,
+        "min": 0,
+        "max": 100,
+        "condition": "vignette_enabled.value"
+      },
+      "mist_opacity": {
+        "order": 78,
+        "text": "Mist Intensity",
+        "type": "slider",
+        "value": 48,
+        "min": 0,
+        "max": 100
+      },
+      "water_rays_opacity": {
+        "order": 79,
+        "text": "Water Rays Intensity",
+        "type": "slider",
+        "value": 58,
+        "min": 0,
+        "max": 100
+      },
+      "background_image": {
+        "order": 80,
+        "text": "Custom Background Image",
+        "type": "file"
+      }
+    }
+  },
+  "title": "Abyssal Lagiacrus",
+  "type": "web",
+  "preview": "preview.jpg"
+}
